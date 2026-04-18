@@ -14,7 +14,7 @@ export async function POST() {
   }
 
   const order = createOrder(MOCK_USER_ID, cart);
-  clearCart(MOCK_USER_ID); 
+  clearCart(MOCK_USER_ID);
 
   return NextResponse.json<ApiResponse<Order>>(
     { success: true, data: order },
