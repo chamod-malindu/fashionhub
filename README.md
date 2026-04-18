@@ -4,6 +4,8 @@ A mobile-first fashion e-commerce app featuring a full product-detail flow — b
 
 **Stack:** React 19 · Next.js 16 · TypeScript 5 · Tailwind CSS 4
 
+**🎥 Demo Video:** [Watch the demo screencast here](https://drive.google.com/file/d/1FpRkX_GPqz9JAZ5NHSj8IlIuW9AqpnI7/view?usp=sharing)
+
 ---
 
 ## Run Locally
