@@ -2,10 +2,32 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { Home, Search, ShoppingBag, Settings } from 'lucide-react';
 
 export default function BottomNav() {
   const pathname = usePathname();
+  const [cartCount, setCartCount] = useState(0);
+
+  // Load cart count
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const res = await fetch('/api/cart');
+        const json = await res.json();
+        if (json.success) {
+          const count = (json.data?.items ?? []).reduce(
+            (sum: number, i: { quantity: number }) => sum + i.quantity,
+            0
+          );
+          setCartCount(count);
+        }
+      } catch { 
+        
+      }
+    };
+    load();
+  }, [pathname]); 
 
   const tabs = [
     {
@@ -26,7 +48,14 @@ export default function BottomNav() {
       href: '/cart',
       label: 'Cart',
       icon: (active: boolean) => (
-        <ShoppingBag size={22} color={active ? '#F97316' : '#9CA3AF'} strokeWidth={2} />
+        <div className="relative">
+          <ShoppingBag size={22} color={active ? '#F97316' : '#9CA3AF'} strokeWidth={2} />
+          {cartCount > 0 && (
+            <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-orange-500 text-white text-[9px] font-bold flex items-center justify-center">
+              {cartCount > 9 ? '9+' : cartCount}
+            </span>
+          )}
+        </div>
       ),
     },
     {

@@ -30,8 +30,10 @@ export default function ProductCard({ product }: Props) {
     <div className="flex flex-col gap-2">
       <Link href={`/products/${product.id}`} className="block">
         {/* Image container */}
-        <div className="relative rounded-2xl overflow-hidden bg-[#F0EBE3]"
-             style={{ aspectRatio: '0.75' }}>
+        <div
+          className="relative rounded-2xl overflow-hidden bg-[#F0EBE3]"
+          style={{ aspectRatio: '0.75' }}
+        >
           <Image
             src={product.image}
             alt={product.name}
@@ -40,7 +42,7 @@ export default function ProductCard({ product }: Props) {
             sizes="(max-width: 390px) 50vw, 195px"
           />
 
-          {/* Cart button — dark circle, bottom right */}
+          {/* Cart button */}
           <button
             onClick={async (e) => {
               e.preventDefault();
@@ -55,7 +57,7 @@ export default function ProductCard({ product }: Props) {
         </div>
       </Link>
 
-      {/* Price and name below image */}
+      {/* Price above name */}
       <div className="px-1">
         <p className="text-sm font-bold text-gray-900">
           ${product.price.toFixed(2)}

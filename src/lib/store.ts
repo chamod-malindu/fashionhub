@@ -7,7 +7,7 @@ export const products: Product[] = [
     name: 'Tagerine Shirt',
     price: 240.32,
     category: 'Men',
-    image: '/images/tagerine-shirt-1.jpg',
+    image: '/images/Rectangle-980.png',
     colors: [
       { name: 'Yellow', hex: '#F5A623' },
       { name: 'Navy',   hex: '#1E3A5F' },
@@ -21,7 +21,7 @@ export const products: Product[] = [
     name: 'Leather Coart',
     price: 325.36,
     category: 'Women',
-    image: '/images/leather-coat-1.jpg',
+    image: '/images/Rectangle-981.png',
     colors: [
       { name: 'Yellow', hex: '#F5A623' },
       { name: 'Black',  hex: '#111827' },
@@ -34,7 +34,7 @@ export const products: Product[] = [
     name: 'Tagerine Shirt',
     price: 126.47,
     category: 'Men',
-    image: '/images/tagerine-shirt-2.jpg',
+    image: '/images/shirt-1.jpg',
     colors: [
       { name: 'Rust',   hex: '#C2410C' },
       { name: 'Yellow', hex: '#F5A623' },
@@ -47,7 +47,7 @@ export const products: Product[] = [
     name: 'Leather Coart',
     price: 257.85,
     category: 'Men',
-    image: '/images/leather-coat-2.jpg',
+    image: '/images/Rectangle-983.png',
     colors: [
       { name: 'Yellow', hex: '#F5A623' },
       { name: 'Grey',   hex: '#9CA3AF' },
@@ -60,7 +60,7 @@ export const products: Product[] = [
     name: 'Premium Tagerine Shirt',
     price: 257.85,
     category: 'Men',
-    image: '/images/premium-tagerine-shirt.jpg',
+    image: '/images/shirt-2.jpg',
     colors: [
       { name: 'Yellow', hex: '#F5A623' },
       { name: 'Navy',   hex: '#1E3A5F' },
